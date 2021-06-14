@@ -19,9 +19,125 @@ $sliderstyle = "style='box-shadow:none;height:".$sliderProperty['sliderheight'].
 
 $widgetSettings = json_decode($homepageModel['widget_settings']);
 ?>
+<div class=" card main-side-nav-card left_sidebar scrollbar_hide    multi-collapse">
+    <div class="sidebar_inner">
+        <div class="card-body with-nav">
+            <div class=" left_sidebar_inner ">
+                <ul class=" main-left-side-nav ">
+                    <li class="">
+                        <a href="<?php echo STRATUS_LATEST ?>" class="">
+                            <div class="svg-container">
+                                <img src="http://localhost/markethub//img/svg_icon/favoritesN.svg" class="">
+                            </div>
+                            <span class="nav-text">Latest Posts</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav local_hub_nav_item">
+                    <li class=" ">
+                        <a href="<?php echo STRATUS_URL ?>">
+                            <div class="svg-container">
+                                <img src="http://localhost/markethub//img/svg_icon/local_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text">Local Hub</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav global_hub_nav_item">
+                    <li class=" ">
+                        <a href="<?php echo STRATUS_GLOBAL ?>">
+                            <div class="svg-container">
+                                <img src="http://localhost/markethub//img/svg_icon/globle_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text">Global Hub</span>
+                        </a>
+                    </li>
+                </ul>
 
+
+                <ul class=" main-left-side-nav video_hub_list">
+                  <li class="<?php echo ($pt->page == 'home') ? 'active' : ''; ?>">
+                        <a href="{{LINK }}">
+                            <div class="svg-container">
+                                <img src="http://localhost/markethub//img/svg_icon/video_hub_icon.svg" class="">
+                            </div>
+                            <span class="nav-text">Video Hub</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class=" main-left-side-nav ">
+                    <li class="">
+                        <a href="<?php echo STRATUS_BLOG ?>">
+                            <div class="svg-container">
+                                <img src="http://localhost/markethub//img/svg_icon/blog_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text"> Blog Hub </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav">
+                    <li class="">
+                        <a href="<?php echo STRATUS_ADS ?>">
+                            <div class="svg-container">
+                                <img src="http://localhost/markethub//img/svg_icon/ad_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text"> Ads Hub </span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- investment module -->
+                <ul class=" main-left-side-nav ">
+                    <li class="">
+                    <a href="<?php echo INVESTMENT_HUB ?>">
+                    <div class="svg-container ">
+                    <img src="http://localhost/markethub//img/svg_icon/Wallet-active.svg" class="whiteicon">
+                    </div>
+                    <span class="nav-text"> Investment </span>
+                    </a>
+                    </li>
+                    </ul>
+                    <!-- -->
+
+
+
+                <ul class=" main-left-side-nav">
+                    <li class="">
+                        <a href="<?php echo STRATUS_MARKET ?>">
+                            <div class="svg-container ">
+                                <img src="http://localhost/markethub//img/svg_icon/market_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text"> Market Hub </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav ">
+                    <li class="">
+                        <a href="<?php echo STRATUS_WALLET ?>">
+                            <div class="svg-container ">
+                                <img src="http://localhost/markethub//img/svg_icon/Wallet-active.svg" class="whiteicon">
+                            </div>
+                            <span class="nav-text"> Wallet </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav left-sidebar-five-ul">
+                    <li>
+                        <a href="{{LINK logout}}">
+                            <div class="svg-container">
+                                <img src="http://localhost/markethub//img/svg_icon/logOut_activeNew.svg" class="whiteicon">
+                            </div>
+                            <span class="nav-text"> Log Out </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
  <div class="row parent_reverce">
-      <section class="col-md-9 col-sm-12 no-hor-padding ">
+      <section class="inner_body">
       <section class="side-collapse-container mainPage">
 
          <section class="slider">
@@ -36,6 +152,31 @@ $widgetSettings = json_decode($homepageModel['widget_settings']);
                 </a>';
          }?>
             </div>
+
+
+            <section class="regular slider">
+    <div>
+      <img src="http://placehold.it/350x300?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=6">
+    </div>
+  </section>
+
+
+
          </section>
          <!--Daily Deals-->
       <?php date_default_timezone_set("Asia/KolKata");
@@ -105,7 +246,7 @@ $widgetSettings = json_decode($homepageModel['widget_settings']);
                 price_val="$100"></span><a href="<?php echo SITE_URL.'shop/'.$cat->category_urlname;?>" id="user_n"
                 usernameval=""><span id="img"
                 class="nodisply"><?php echo $imageurl;?></span>
-              <div class="product_cnt clearfix col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="product_cnt clearfix col-xs-12 col-sm-4 col-md-4 col-lg-4 custom_col_1">
                 <div class="bg_product" id="item_cnt97">
                   <img src="<?php echo $imageurl;?>" class="img-responsive">
                 </div>
@@ -437,12 +578,12 @@ $widgetSettings = json_decode($homepageModel['widget_settings']);
         </div>
       </section>
  -->
-  <section class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+ <div id="right-sidebar " class="right-sidebar scrollbar_hide ">
+ <section id="" class=" ">
         <div class="cateGory">
           <div class="category">
             <div id="sidebar">
-              <div class="sidebar__inner border_right_grey" style="position: relative; ">
-               
+              <div class="sidebar__inner" style="position: relative; ">
                 <div id="accordion1" class="panel-group margin-bottom0">
                   <div id="" class="panel panel-default box_shadow0">
                     <div class="panel-heading padding0">
@@ -451,7 +592,6 @@ $widgetSettings = json_decode($homepageModel['widget_settings']);
                         <h4 class="panel-title bold-font filter_accordion accordion_shop primary-color-bg white-txt">
                           <div class="inlined-display shop_filter_menu_padding">
                             <?php echo __d('user','Filters');?></div><i class="more-less glyphicon glyphicon-plus bold-font"></i>
-
                         </h4>
                       </a>
                     </div>
@@ -459,21 +599,21 @@ $widgetSettings = json_decode($homepageModel['widget_settings']);
                       <div class="no-hor-padding padding-top0">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                            <div class="parent">
-                  <form action="<?php echo SITE_URL.'searchproduct'?>" method="post">
-                  <input type="search" placeholder="<?php echo __d('user','Search here...');?>" class="" name="searchkey">
-                  <div class="price_range">
-                    <p><?php echo __d('user','Price Range');?></p>
-                    <div class="priceSlider">
-                   
-                      <input id="range" type="range" min="0" max="5000" value="5000">
-                    </div>
-                      <span id="value" ></span>
-                     <input type="hidden" id="price_value"  name="price" />
-                  </div>
+                              <form action="<?php echo SITE_URL.'searchproduct'?>" method="post">
+                              <input type="search" placeholder="<?php echo __d('user','Search here...');?>" class="" name="searchkey">
+                              <div class="price_range">
+                                <p><?php echo __d('user','Price Range');?></p>
+                                <div class="priceSlider">
+                              
+                                  <input id="range" type="range" min="0" max="5000" value="5000">
+                                </div>
+                                  <span id="value" ></span>
+                                <input type="hidden" id="price_value"  name="price" />
+                              </div>
 
-                  <input type="submit" class="btn primary-color-bg primary-color-bg deals" value="<?php echo __d('user','Search');?>" />
-                </form>
-                </div>
+                              <input type="submit" class="btn primary-color-bg primary-color-bg deals" value="<?php echo __d('user','Search');?>" />
+                            </form>
+                            </div>
                           <div class="panel panel-default">
                             <div class="panel-heading padding0" role="tab" id="headingOne">
                               <a role="button" class="accordion_one" data-toggle="collapse" data-parent="#accordion"
@@ -481,18 +621,15 @@ $widgetSettings = json_decode($homepageModel['widget_settings']);
                                 <h4 class="panel-title accordion_shop bold-font">
                                   <div class="inlined-display shop_filter_menu_padding">
                                     <?php echo __d('user','Categories');?></div><!-- <i class="more-less glyphicon glyphicon-minus"></i> -->
-
                                 </h4>
                               </a>
                             </div>
-
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
                               aria-labelledby="headingOne">
                               <div class="panel-body list_menu" style="max-height: 350px">
 
                                 <?php foreach($parent_categories as $parent_cat){
                                         $imageurl = SITE_URL.'images/category/'.$parent_cat->category_webicon;
-
                                   ?>
                                 <a class="shop_menu" data-parent="#nested"
                                   href="<?php echo SITE_URL.'shop/'.$parent_cat->category_urlname;?>">
@@ -502,20 +639,11 @@ $widgetSettings = json_decode($homepageModel['widget_settings']);
                                   <h4 class="panel-title sub_menu_panel"><?php echo $parent_cat->category_name?></h4>
                                 </a>
                                 <?php }?>
-                              
-
-                               
                               </div>
                             </div>
                           </div>
-
-
                         </div>
-
-
-
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -527,8 +655,10 @@ $widgetSettings = json_decode($homepageModel['widget_settings']);
           </div>
         </div>
       </section>
+ </div>
+
    <!-- E O filters -->
-     
+   </div>
    </div>
 
 
@@ -711,6 +841,66 @@ echo '<input type="hidden" id="likedbtncnt" value="'.$setngs['liked_btn_cmnt'].'
       ]
     });
   </script> -->
+
+
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".vertical-center-4").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 4,
+        slidesToScroll: 2
+      });
+      $(".vertical-center-3").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".vertical-center-2").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      });
+      $(".vertical-center").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+      });
+      $(".vertical").slick({
+        dots: true,
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 5,
+        slidesToScroll: 3
+      });
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+    });
+</script>
 <script>
 
 

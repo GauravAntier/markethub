@@ -1,0 +1,44 @@
+@media (min-width: 574px) {
+    
+}
+@media (min-width: 766px) {
+    
+}
+@media (min-width: 990px) {
+    .mob_sidebar {
+        display: none;
+    }
+    .navbar-header,.navbar-header + .navBarcollapse {
+        flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        -webkit-flex: 0 0 50%;
+        max-width: 50%;
+        float: none;
+    }
+    .navbar-header {
+        padding-right: 15px;
+    }
+    .navbar-header + .navBarcollapse{
+        padding-left: 15px;
+    } 
+}
+@media (min-width: 1023px) {
+    
+}
+
+/* max-width */
+@media (max-width: 1199px) {
+    
+}
+@media (max-width: 1024px) {
+    
+}
+@media (max-width: 991px) {
+    
+}
+@media (max-width: 767px) {
+    
+}
+@media (max-width: 575px) {
+    
+}

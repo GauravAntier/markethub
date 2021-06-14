@@ -4,9 +4,9 @@ use Cake\I18n\Time;
 //echo $this->element($slider,array('model'=>$model));
 ?>
  <!-- Popular product section -->
-              <section>
+              <section class="popular_product_sec">
                
-            <div class="section_header col-xs-12 col-sm-12 col-md-12 col-lg-12 no-hor-padding">
+            <div class="section_header col-xs-12 col-sm-12 col-md-12 col-lg-12 no-hor-padding ">
               <h2 class="section_heading bold-font">
                  <?php echo __d('user','Popular Products');?></h2>
               <div class="view-all-btn btn primary-color-bg primary-color-bg pull-right">
@@ -151,7 +151,7 @@ use Cake\I18n\Time;
 
              
                ?>
-              <div class="item1 box_shadow_img">
+              <div class="item1 box_shadow_img custom_style2">
                 <div class="product_cnt clearfix">
                   <a class="img-hover1" href="<?php echo $popular['product_url'];?>">
                     <div class="bg_product">

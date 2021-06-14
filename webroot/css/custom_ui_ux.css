@@ -1,0 +1,11 @@
+.fullPage {
+    position: relative;
+}
+.settingPageSidebar {
+    position: fixed;
+    top: 168px;
+    right: 0;
+    max-width: 345px;
+    overflow-x: auto;
+    max-height: calc(100vh - 185px);
+}

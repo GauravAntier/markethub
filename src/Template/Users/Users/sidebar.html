@@ -1,0 +1,256 @@
+<div class=" card main-side-nav-card left_sidebar scrollbar_hide    multi-collapse">
+    <div class="sidebar_inner">
+        <div class="card-body with-nav">
+            <div class=" left_sidebar_inner ">
+                <ul class=" main-left-side-nav ">
+                    <li class="">
+                        <a href="<?php echo STRATUS_LATEST ?>" class="">
+                            <div class="svg-container">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/favoritesN.svg" class="">
+                            </div>
+                            <span class="nav-text">Latest Posts</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav local_hub_nav_item">
+                    <li class=" ">
+                        <a href="<?php echo STRATUS_URL ?>">
+                            <div class="svg-container">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/local_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text">Local Hub</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav global_hub_nav_item">
+                    <li class=" ">
+                        <a href="<?php echo STRATUS_GLOBAL ?>">
+                            <div class="svg-container">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/globle_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text">Global Hub</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class=" main-left-side-nav video_hub_list">
+                    <li class="<?php echo ($pt->page == 'home') ? 'active' : ''; ?>">
+                        <a href="{{LINK }}">
+                            <div class="svg-container">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/video_hub_icon.svg" class="">
+                            </div>
+                            <span class="nav-text">Video Hub</span>
+                        </a>
+                    </li>
+                    <li class="<?php echo ($pt->page == 'timeline') ? 'active' : ''; ?> ">
+                        <a href="{{ME url}}" data-loads="?link1=timeline&id={{ME username}}">
+                            <div class="svg-container">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/profile_iconN.svg" class="">
+                            </div>
+                            <span class="nav-text">Profile</span>
+                        </a>
+                    </li>
+
+                    <div class="drop_downnav_item">
+                        <ul>
+                            <li class="<?php echo ($pt->page == 'trending') ? 'active' : ''; ?>">
+                                <a href="{{LINK videos/trending}}" data-loads="?link1=videos&page=trending">
+                                    <div class="svg-container">
+                                        <img src="{{CONFIG theme_url}}/img/svg_img/Trending_icon.svg" class="">
+                                    </div>
+                                    <span class="nav-text">Trending</span>
+                                </a>
+                            </li>
+                            <!-- <li class="" >
+                            <a href="#">
+                                <div class="svg-container">
+                                    <img  src="{{CONFIG theme_url}}/img/svg_img/live_tv_icon.svg" class=""> 
+                                </div><span class="nav-text">Live Tv</span>
+                            </a>
+                        </li> -->
+                            <li class="<?php echo ($pt->page == 'popular_channels') ? 'active' : ''; ?>">
+                                <a href="{{LINK popular_channels}}" class="">
+                                    <div class="svg-container">
+                                        <img src="{{CONFIG theme_url}}/img/svg_img/search_icon_n.svg" class="">
+                                    </div>
+                                    <span class="nav-text"> Browse Channels </span>
+                                </a>
+                            </li>
+                            <?php if ($pt->config->live_video == 1 && ($pt->config->who_use_live == 'all' || ($pt->config->who_use_live == 'admin' && PT_IsAdmin()) || ($pt->config->who_use_live == 'pro' && $pt->user->is_pro > 0))) { ?>
+                            <li class="">
+                                <a href="{{LINK videos/live}}" data-loads="?link1=videos&page=live">
+                                    <div class="svg-container">
+                                        <img src="{{CONFIG theme_url}}/img/svg_img/live_video_icon1.svg" class="">
+                                    </div>
+                                    <span class="nav-text"> Live Videos </span>
+                                </a>
+                            </li>
+                            <?php } ?>
+                            <li class="<?php echo ($pt->page == 'history') ? 'active' : ''; ?>">
+                                <a href="{{LINK history}}" data-loads="?link1=history">
+                                    <div class="svg-container">
+                                        <img src="{{CONFIG theme_url}}/img/svg_img/history_icon.svg" class="">
+                                    </div>
+                                    <span class="nav-text"> History </span>
+                                </a>
+                            </li>
+                            <li class="<?php echo ($pt->page == 'wishlist') ? 'active' : ''; ?>">
+                                <a href="{{LINK wishlist}}" data-loads="?link1=wishlist">
+                                    <div class="svg-container">
+                                        <img src="{{CONFIG theme_url}}/img/svg_img/wishlist_icon.svg" class="">
+                                    </div>
+                                    <span class="nav-text"> Wishlist </span>
+                                </a>
+                            </li>
+                            <li class="<?php echo ($pt->page == 'movies') ? 'active' : ''; ?>">
+                                <a href="{{LINK movies}}" data-loads="?link1=movies">
+                                    <div class="svg-container">
+                                        <img src="{{CONFIG theme_url}}/img/svg_img/movies_icon.svg" class="">
+                                    </div>
+                                    <span class="nav-text"> Movies </span>
+                                </a>
+                            </li>
+                            <li class="<?php echo ($pt->page == 'settings') ? 'active' : ''; ?> ">
+                                <a href="{{LINK settings}}" data-loads="?link1=settings">
+                                    <div class="svg-container">
+                                        <img src="{{CONFIG theme_url}}/img/svg_img/setting_iconN.svg" class="">
+                                    </div>
+                                    <span class="nav-text">Settings</span>
+                                </a>
+                            </li>
+                            <?php if (PT_IsAdmin()) { ?>
+                            <li class="hid_svg">
+                                <a href="{{LINK admin-cp/}}">
+                                    <div class="svg-container">
+                                        <!-- <img  src="{{CONFIG theme_url}}/img/svg_img/movies_icon.svg" class=""> -->
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                            xml:space="preserve">
+                                            <path style="fill:#F8B64C;"
+                                                d="M256,86.4c51.2,0,98.133,21.333,132.267,54.4l49.067-49.067
+                                            C391.467,45.867,327.467,17.067,256,17.067c-70.4,0-134.4,28.8-181.333,74.667l49.067,49.067C157.867,106.667,204.8,86.4,256,86.4z">
+                                            </path>
+                                            <path style="fill:#54C0EB;"
+                                                d="M123.733,140.8L74.667,91.733C28.8,138.667,0,202.667,0,273.067s28.8,134.4,74.667,181.333
+                                            l49.067-49.067c-34.133-34.133-54.4-81.067-54.4-132.267C69.333,221.867,89.6,174.933,123.733,140.8z">
+                                            </path>
+                                            <path style="fill:#F1543F;"
+                                                d="M437.333,91.733L388.267,140.8c34.133,34.133,54.4,81.067,54.4,132.267s-21.333,98.133-54.4,132.267
+                                            l49.067,49.067C483.2,408.533,512,344.533,512,273.067C512,202.667,483.2,138.667,437.333,91.733z">
+                                            </path>
+                                            <path style="fill:#FFD15C;"
+                                                d="M388.267,140.8l-46.933,46.933c-22.4-21.333-52.267-35.2-85.333-35.2s-64,13.867-85.333,35.2l0,0
+                                            L123.733,140.8C157.867,106.667,204.8,86.4,256,86.4S354.133,106.667,388.267,140.8z"></path>
+                                            <path style="fill:#84DBFF;"
+                                                d="M170.667,358.4l-46.933,46.933c-34.133-34.133-54.4-81.067-54.4-132.267s21.333-98.133,54.4-132.267
+                                            l46.933,46.933c-21.333,21.333-35.2,52.267-35.2,85.333C134.4,306.133,148.267,337.067,170.667,358.4z">
+                                            </path>
+                                            <path style="fill:#FF7058;"
+                                                d="M442.667,273.067c0,51.2-21.333,98.133-54.4,132.267L341.333,358.4
+                                            c21.333-22.4,35.2-52.267,35.2-85.333s-13.867-64-35.2-85.333l46.933-46.933C422.4,174.933,442.667,221.867,442.667,273.067z">
+                                            </path>
+                                            <path style="fill:#40596B;"
+                                                d="M420.267,171.733L281.6,277.333c-2.133,12.8-12.8,21.333-25.6,21.333
+                                            c-14.933,0-26.667-11.733-26.667-26.667s11.733-26.667,26.667-26.667c3.2,0,5.333,0,8.533,1.067L420.267,171.733z">
+                                            </path>
+                                            <path style="fill:#CDD6E0;" d="M347.733,494.933H164.267c-22.4,0-40.533-18.133-40.533-40.533l0,0
+                                            c0-22.4,18.133-40.533,40.533-40.533h182.4c22.4,0,40.533,18.133,40.533,40.533l0,0C388.267,476.8,370.133,494.933,347.733,494.933z
+                                            "></path>
+                                            <circle style="fill:#FFFFFF;" cx="256" cy="273.07" r="10.667"></circle>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                        </svg>
+                                    </div>
+                                    <span class="nav-text"> Admin Panel </span>
+                                </a>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </ul>
+                <ul class=" main-left-side-nav ">
+                    <li class="">
+                        <a href="<?php echo STRATUS_BLOG ?>">
+                            <div class="svg-container">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/blog_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text"> Blog Hub </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav">
+                    <li class="">
+                        <a href="<?php echo STRATUS_ADS ?>">
+                            <div class="svg-container">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/ad_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text"> Ads Hub </span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- investment module -->
+                <ul class=" main-left-side-nav ">
+                    <li class="">
+                    <a href="<?php echo INVESTMENT_HUB ?>">
+                    <div class="svg-container ">
+                    <img src="{{CONFIG theme_url}}/img/svg_img/Wallet-active.svg" class="whiteicon">
+                    </div>
+                    <span class="nav-text"> Investment </span>
+                    </a>
+                    </li>
+                    </ul>
+                    <!-- -->
+
+
+
+                <ul class=" main-left-side-nav">
+                    <li class="">
+                        <a href="<?php echo STRATUS_MARKET ?>">
+                            <div class="svg-container ">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/market_hubN.svg" class="">
+                            </div>
+                            <span class="nav-text"> Market Hub </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav ">
+                    <li class="">
+                        <a href="<?php echo STRATUS_WALLET ?>">
+                            <div class="svg-container ">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/Wallet-active.svg" class="whiteicon">
+                            </div>
+                            <span class="nav-text"> Wallet </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" main-left-side-nav left-sidebar-five-ul">
+                    <li>
+                        <a href="{{LINK logout}}">
+                            <div class="svg-container">
+                                <img src="{{CONFIG theme_url}}/img/svg_img/logOut_activeNew.svg" class="whiteicon">
+                            </div>
+                            <span class="nav-text"> Log Out </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <a href =""class="menu-icon" data-toggle="collapse" style="font-size:30px;cursor:pointer">&#9776; </a> -->
+<!-- <a href="javascript:void(0)" class="closebtn" >&times;</a> -->

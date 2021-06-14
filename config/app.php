@@ -228,7 +228,7 @@ return [
              */
             //'port' => 'non_standard_port_number',
             'username' => 'root',
-            'password' => 'Admin@123',
+            'password' => '',
             'database' => 'stratus_fantacy',
             'encoding' => 'utf8mb4', // to support emoji characters
             'timezone' => 'UTC',

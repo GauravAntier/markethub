@@ -4,7 +4,7 @@ namespace App\Model\Table;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
-class Order_itemsTable extends Table
+class OrderItemsTable extends Table
 {
  public function initialize(array $config)
     {
@@ -12,7 +12,7 @@ class Order_itemsTable extends Table
 
         $this->table('fc_order_items');
        
-        $this->primaryKey('orderitemid');
+        $this->primaryKey('orderItemid');
 
         $this->addBehavior('Timestamp');
  
