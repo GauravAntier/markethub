@@ -135,6 +135,7 @@ if(isset($metavalue) && $metavalue == 'itemdetails')
         <?= $this->Html->script('assets/plugins/datatables/jquery.dataTables.min.js') ?>
         <?= $this->Html->script('jquery-ui.1.12.js') ?>
         <?= $this->Html->script('sticky-sidebar.js') ?>
+        <?= $this->Html->script('slick.js') ?>
         <?= $this->Html->script('assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js') ?>
 
         <!--Phase2 js-->
