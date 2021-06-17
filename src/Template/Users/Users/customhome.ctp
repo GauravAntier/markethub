@@ -141,39 +141,36 @@ $widgetSettings = json_decode($homepageModel['widget_settings']);
       <section class="side-collapse-container mainPage">
 
          <section class="slider">
-            <div class="banner"> 
-            <?php
-        $sliderkey = 0;
-        //echo '<pre>';print_r($sliders);
-        //foreach($sliders as $skey => $slider){
-          if($sliders[0]['mode'] == 'web'){ 
-              echo '<a href="'.$sliders[0]['link'].'" target="_blank" style="display:block;">
-                  <img src="'.SITE_URL.'images/slider/'.$sliders[0]['image'].'" alt="'.$sliders[0]['image'].'">
-                </a>';
-         }?>
-            </div>
+              <div class="banner"> 
+              <?php
+          $sliderkey = 0;
+          //echo '<pre>';print_r($sliders);
+          //foreach($sliders as $skey => $slider){
+            if($sliders[0]['mode'] == 'web'){ 
+                echo '<a href="'.$sliders[0]['link'].'" target="_blank" style="display:block;">
+                    <img src="'.SITE_URL.'images/slider/'.$sliders[0]['image'].'" alt="'.$sliders[0]['image'].'">
+                  </a>';
+          }?>
+              </div>
 
-
-            <section class="regular slider">
-    <div>
-      <img src="http://placehold.it/350x300?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=6">
-    </div>
-  </section>
+<!-- 
+            <section class="homepage_main_banner slider">
+              <div>
+                <img src="http://localhost/markethub/images/slider/1593241087_1.jpg">
+              </div>
+              <div>
+                <img src="http://localhost/markethub/images/slider/1593241087_1.jpg">
+              </div>
+              <div>
+                <img src="http://localhost/markethub/images/slider/1593241087_1.jpg">
+              </div>
+              <div>
+                <img src="http://localhost/markethub/images/slider/1593241087_1.jpg">
+              </div>
+              <div>
+                <img src="http://localhost/markethub/images/slider/1593241087_1.jpg">
+              </div>
+            </section> -->
 
             <section class="popular_product_sec">
                
@@ -1013,7 +1010,7 @@ echo '<input type="hidden" id="likedbtncnt" value="'.$setngs['liked_btn_cmnt'].'
   </script>
     <script>
 
-$('.regular').slick({
+$('.homepage_main_banner').slick({
   arrows: true,
   spaceBetween: 30,
   infinite: false,

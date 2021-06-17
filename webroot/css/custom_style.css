@@ -214,3 +214,8 @@ header > .navbar.navbar-default {
 	width: 100%;
 	flex-wrap: wrap;
 } */
+.homepage_main_banner.slick-initialized .slick-prev, .homepage_main_banner.slick-initialized .slick-next {
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 999999999999;
+}
